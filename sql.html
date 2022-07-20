@@ -62,327 +62,346 @@
               cláusula WHERE nos comando de UPDATE e DELETE.</b></div>
         </ul>
       </div>
-    </div>
-    <div class="card-col">
-      <h2>Database</h2>
-      <ul class="" type="none">
-        <li>
-          <span class="code-bold">CREATE DATABASE database_name;</span>
-          <p class="obs">Cria um banco de dados</p>
-        </li>
-        <li>
-          <span class="code-bold">SHOW DATABASES;</span>
-          <p class="obs">Exibe na tela os bancos de dados no servidor</p>
-        </li>
-        <li>
-          <span class="code-bold">USE database;</span>
-          <p class="obs">Seleciona o banco de dados no qual se deseja trabalhar
-          </p>
-        </li>
-        <li>
-          <span class="code-bold">DROP DATABASE database_name;</span>
-          <p class="obs">Exclui um banco de dados</p>
-        </li>
-      </ul>
-    </div>
-    <div class="card-col">
-      <h2>Criação de tabela e formatação de colunas</h2>
-      <ul type="none">
-        <li>
-          <span class="code-bold">CREATE TABLE table_name (col1 datatype1, col2
-            datatype2);</span>
-          <p class="obs">Cria uma tabela com as colunas col1 e col2, com os data
-            types 1 e 2 respectivamente</p>
-        </li>
-        <li>
-          <span class="code-bold">DROP TABLE table_name;</span>
-          <p class="obs">Deleta uma tabela</p>
-        </li>
-        <li>
-          <span class="code-bold">ALTER TABLE table_name ADD COLUMN column_name
-            data_type;</span>
-          <p class="obs">Adiciona a coluna column_name do tipo data_type na
-            tabela table_name</p>
-        </li>
-        <li>
-          <span class="code-bold">ALTER TABLE table_name DROP COLUMN
-            column_name;</span>
-          <p class="obs">Remove a coluna column_name da tabela table_name</p>
-        </li>
-        <li>
-          <span class="code-bold">ALTER TABLE table_name MODIFY COLUMN
-            column_name data_type;</span>
-          <p class="obs">Modifica a coluna column_name da tabela table_name para
-            virar do tipo data_type</p>
-        </li>
-      </ul>
-      <h3>Constraints</h3>
-      <ul type="none">
-        <li>
-          <span class="code-bold">NOT NULL</span>
-          <p class="obs">Impede que determinado campo seja nulo</p>
-        </li>
-        <li>
-          <span class="code-bold">INDEX</span>
-          <p class="obs">CREATE INDEX index_name ON table_name(column_name)</p>
-        </li>
-        <li>
-          <span class="code-bold">UNIQUE</span>
-          <p class="obs">Impede que determinado campo tenha valores iguais para
-            registros diferentes</p>
-        </li>
-        <li>
-          <span class="code-bold">PRIMARY KEY</span>
-          <p class="obs">(column_name)</p>
-        </li>
-        <li>
-          <span class="code-bold">AUTO_INCREMENT</span>
-          <p class="obs">Atribui a uma coluna de uma tabela a função de se auto
-            incrementar conforme são inseridos registros</p>
-        </li>
-        <li>
-          <span class="code-bold">FOREIGN KEY</span>
-          <p class="obs">FOREIGN KEY (column_name) REFERENCE
-            table_name(column_name)</p>
-        </li>
-      </ul>
-    </div>
-    <div class="card-col">
-      <h2>Tipos de dados</h2>
-      <ul class="" type="none">
-        <li>
-          <span class="code-bold">CHAR(n)</span>
-          <p class="obs">Campo de texto contendo até n caracteres (255
-            caracteres)</p>
-        </li>
-        <li>
-          <span class="code-bold">VARCHAR(n)</span>
-          <p class="obs">Campo de texto contendo até n caracteres (65535
-            caracteres)</p>
-        </li>
-        <li>
-          <span class="code-bold">BOOL</span>
-          <p class="obs">Campo booleano, aceitando 0 para <b>falso</b> e
-            qualquer outro valor numerico para <b>verdadeiro</b></p>
-        </li>
-        <li>
-          <span class="code-bold">INT</span>
-          <p class="obs">Campo numérico contendo números de -2147483648 até
-            2147483648</p>
-        </li>
-        <li>
-          <span class="code-bold">FLOAT</span>
-          <p class="obs">Campo numérico contendo números com vírgula</p>
-        </li>
-        <li>
-          <span class="code-bold">DATE</span>
-          <p class="obs">Campo de data, sempre no formato 'YYYY-MM-DD'</p>
-        </li>
-        <li>
-          <span class="code-bold">DATETIME</span>
-          <p class="obs">Campo de data e horario, sempre no formato 'YYYY-MM-DD
-            hh:mm:ss'</p>
-        </li>
-        <li>
-          <span class="code-bold">TIMESTAMP</span>
-          <p class="obs">Campo de data, sempre no formato de DATETIME, porém
-            este tipo aceita apenas dados entre 1970 e 2038</p>
-        </li>
-      </ul>
-    </div>
-    <div class="card-col">
-      <h2>Avançando em SELECT</h2>
-      <h3>Cláusulas</h3>
-      <ul>
-        <li>
-          <span class="code-bold">WHERE</span>
-          <p class="obs">É o melhor e mais importante filtro para trazer dados
-            mais específicos dentro de uma query</p>
-        </li>
-        <li>
-          <span class="code-bold">HAVING</span>
-          <p class="obs">É semelhante à clausula WHERE, porém se refere a <a
-              href="#agregate">agregate functions</a></p>
-        </li>
-        <li>
-          <span class="code-bold">DISTINCT</span>
-          <p class="obs">Esta cláusula seleciona apenas os valores distintos
-            entre si (alternativa para GROUP BY)</p>
-        </li>
-        <li>
-          <span class="code-bold">EXISTS/ANY</span>
-          <p class="obs"></p>
-        </li>
-        <li>
-          <span class="code-bold">AND/OR/NOT</span>
-          <p class="obs">Ajuda o WHERE a filtrar ainda mais especificamente a
-            consulta</p>
-        </li>
-        <li>
-          <span class="code-bold">ORDER BY column_name DESC/ASC</span>
-          <p class="obs">Coloca os dados trazidos em ordem de acordo com a
-            coluna selecionada</p>
-        </li>
-        <li>
-          <span class="code-bold">LIMIT amount</span>
-          <p class="obs">Limita o número de dados trazidos pela query</p>
-        </li>
-        <li>
-          <span class="code-bold">SQL_SAFE_UPDATES = 0</span>
-          <p class="obs">Remove controle de segurança para updates sem cláusula
-            WHERE (evitar ativar)</p>
-        </li>
-        <li>
-          <span class="code-bold">ALIAS</span>
-          <p class="obs">SELECT COUNT(*) AS alias_name FROM table_name</p>
-        </li>
-      </ul>
-      <h3>Operadores</h3>
-      <ul>
-        <li><span class="code-bold">
-            <,>, <=,>=, =
-          </span>
-          <p class="obs">Operadores básicos da matematica</p>
-        </li>
-        <li>
-          <span class="code-bold">LIKE</span>
-          <p class="obs">SELECT * FROM table_name WHERE column_name LIKE
-            '%text_split%'</p>
-        </li>
-        <li>
-          <span class="code-bold">IN</span>
-          <p class="obs">SELECT * FROM table_name WHERE column_name IN
-            (column_item, column_item)</p>
-        </li>
-        <li>
-          <span class="code-bold">BETWEEN</span>
-          <p class="obs">SELECT * FROM table_name WHERE column_name BETWEEN
-            column_item_min AND column_item_max (aceita ORDER BY)</p>
-        </li>
-      </ul>
-      <h3>Agrgegate functions</h3>
-      <p>
-      <ul>
-        <li>
-          <span class="code-bold">MIN(column_name)</span>
-          <p class="obs">SELECT MIN(column_name) FROM table_name</p>
-        </li>
-        <li>
-          <span class="code-bold">MAX(column_name)</span>
-          <p class="obs">SELECT MAX(column_name) FROM table_name</p>
-        </li>
-        <li>
-          <span class="code-bold">COUNT(column_name)</span>
-          <p class="obs">SELECT COUNT(column_name) FROM table_name WHERE
-            data_comparison</p>
-        </li>
-        <li>
-          <span class="code-bold">AVG(column_name)</span>
-          <p class="obs">SELECT AVG(column_name) FROM table_name</p>
-        </li>
-        <li>
-          <span class="code-bold">SUM(column_name)</span>
-          <p class="obs">SELECT SUM(column_name) FROM table_name OBS: Não
-            funciona com ORDER BY column_name</p>
-        </li>
-      </ul>
-      </p>
-    </div>
-    <div class="card-col">
-      <h2>Funções em SQL</h2>
-      <h3>Funcões de String</h3>
-      <ul>
-        <li>
-          <span class="code-bold">CHAR_LENGTH(string)</span>
-          <p class="obs">Retorna a quantidade de caracteres de uma determinada
-            string</p>
-        </li>
-        <li>
-          <span class="code-bold">CONCAT(string, " ", string)</span>
-          <p class="obs">A função CONCAT_WS("separador", string1, string2)
-            concatena dados com um separador comum</p>
-        </li>
-        <li>
-          <span class="code-bold">FORMAT(number, slots)</span>
-          <p class="obs">Formata um número com determinado número de casas após
-            a vírgula e arredonda de acordo com a regra da matematica</p>
-        </li>
-        <li>
-          <span class="code-bold">INSTR(string, substring)</span>
-          <p class="obs">Retorna a posição da substring na string alvo</p>
-        </li>
-        <li>
-          <span class="code-bold">LCASE(string) / UCASE(string)</span>
-          <p class="obs">Transforma o conteúdo da string em caixa baixa ou caixa
-            alta, respectivamente</p>
-        </li>
-        <li>
-          <span class="code-bold">LEFT(string, number) / RIGHT(string,
-            number)</span>
-          <p class="obs">Extrai determinado número de caracteres de uma string,
-            a começar pela esquerda (LEFT) ou pela direita (RIGHT)</p>
-        </li>
-        <li>
-          <span class="code-bold">REPLACE(column_name, string_before,
-            string_after)</span>
-          <p class="obs">Substitui determinado texto de uma coluna</p>
-        </li>
-        <li>
-          <span class="code-bold">SUBSTR(column_name, index, amount)</span>
-          <p class="obs">Extrai determinada quantidade de caracteres (amount) de
-            uma string, começando pelo index</p>
-        </li>
-      </ul>
-      <h3>Funcões de Number</h3>
-      <ul>
-        <li>
-          <span class="code-bold">COUNT(column_name)</span>
-          <p class="obs">Conta o número de ocorrências em uma determinada coluna
-          </p>
-        </li>
-        <li>
-          <span class="code-bold">CEIL(column_name) / FLOOR(column_name)</span>
-          <p class="obs">Arredonda para cima/baixo</p>
-        </li>
-        <li>
-          <span class="code-bold">MAX(column_name) / MIN(column_name)</span>
-          <p class="obs">Retorna o maior/menor valor de uma determinada coluna
-          </p>
-        </li>
-        <li>
-          <span class="code-bold">SUM(column_name)</span>
-          <p class="obs">Retorna a soma dos valores de uma determinada coluna
-          </p>
-        </li>
-      </ul>
-      <h3>Funcões de Date</h3>
-      <ul>
-        <li>
-          <span class="code-bold">ADDDATE(column_name, date_amount) /
-            ADDTIME(column_name, time_amount[yyyy-mm-dd hh:mm:ss])</span>
-          <p class="obs">Adiciona ou remove dias, meses, anos, horas, minutos e
-            segundos em um campo do tipo DATE/TIMESTAMP</p>
-        </li>
-        <li>
-          <span class="code-bold">DATEDIFF(date1, date2)</span>
-          <p class="obs">Retorna a diferença entre duas datas, em dias</p>
-        </li>
-        <li>
-          <span class="code-bold">DATE_FORMAT(date, format[%d, %m, %Y])</span>
-          <p class="obs">Formata uma data para o modelo desejado</p>
-        </li>
-        <li>
-          <span class="code-bold">DAY(), MONTH(), YEAR()</span>
-          <p class="obs">Retorna um número equivalente ao dia, mês, ano em
-            determinada string no formato YYYY-mm-dd hh:mm:ss</p>
-        </li>
-        <li>
-          <span class="code-bold">DAYOFWEEK(), DAYOFYEAR(), WEEKOFYEAR()</span>
-          <p class="obs">Retorna um número equivalente ao dia da semana, dia do
-            ano e semana do ano em determinada string no formato YYYY-mm-dd
-            hh:mm:ss</p>
-        </li>
-      </ul>
+      <div class="card-col">
+        <h2>Database</h2>
+        <ul>
+          <li>
+            <span class="code-bold">CREATE DATABASE database_name;</span>
+            <p class="obs">Cria um banco de dados</p>
+          </li>
+          <li>
+            <span class="code-bold">SHOW DATABASES;</span>
+            <p class="obs">Exibe na tela os bancos de dados no servidor</p>
+          </li>
+          <li>
+            <span class="code-bold">USE database;</span>
+            <p class="obs">Seleciona o banco de dados no qual se deseja
+              trabalhar
+            </p>
+          </li>
+          <li>
+            <span class="code-bold">DROP DATABASE database_name;</span>
+            <p class="obs">Exclui um banco de dados</p>
+          </li>
+        </ul>
+      </div>
+      <div class="card-col">
+        <h2>Criação de tabela e formatação de colunas</h2>
+        <ul>
+          <li>
+            <span class="code-bold">CREATE TABLE table_name (col1 datatype1,
+              col2
+              datatype2);</span>
+            <p class="obs">Cria uma tabela com as colunas col1 e col2, com os
+              data
+              types 1 e 2 respectivamente</p>
+          </li>
+          <li>
+            <span class="code-bold">DROP TABLE table_name;</span>
+            <p class="obs">Deleta uma tabela</p>
+          </li>
+          <li>
+            <span class="code-bold">ALTER TABLE table_name ADD COLUMN
+              column_name
+              data_type;</span>
+            <p class="obs">Adiciona a coluna column_name do tipo data_type na
+              tabela table_name</p>
+          </li>
+          <li>
+            <span class="code-bold">ALTER TABLE table_name DROP COLUMN
+              column_name;</span>
+            <p class="obs">Remove a coluna column_name da tabela table_name</p>
+          </li>
+          <li>
+            <span class="code-bold">ALTER TABLE table_name MODIFY COLUMN
+              column_name data_type;</span>
+            <p class="obs">Modifica a coluna column_name da tabela table_name
+              para
+              virar do tipo data_type</p>
+          </li>
+        </ul>
+        <h3>Constraints</h3>
+        <ul>
+          <li>
+            <span class="code-bold">NOT NULL</span>
+            <p class="obs">Impede que determinado campo seja nulo</p>
+          </li>
+          <li>
+            <span class="code-bold">INDEX</span>
+            <p class="obs">CREATE INDEX index_name ON table_name(column_name)
+            </p>
+          </li>
+          <li>
+            <span class="code-bold">UNIQUE</span>
+            <p class="obs">Impede que determinado campo tenha valores iguais
+              para
+              registros diferentes</p>
+          </li>
+          <li>
+            <span class="code-bold">PRIMARY KEY</span>
+            <p class="obs">(column_name)</p>
+          </li>
+          <li>
+            <span class="code-bold">AUTO_INCREMENT</span>
+            <p class="obs">Atribui a uma coluna de uma tabela a função de se
+              auto
+              incrementar conforme são inseridos registros</p>
+          </li>
+          <li>
+            <span class="code-bold">FOREIGN KEY</span>
+            <p class="obs">FOREIGN KEY (column_name) REFERENCE
+              table_name(column_name)</p>
+          </li>
+        </ul>
+      </div>
+      <div class="card-col">
+        <h2>Tipos de dados</h2>
+        <ul>
+          <li>
+            <span class="code-bold">CHAR(n)</span>
+            <p class="obs">Campo de texto contendo até n caracteres (255
+              caracteres)</p>
+          </li>
+          <li>
+            <span class="code-bold">VARCHAR(n)</span>
+            <p class="obs">Campo de texto contendo até n caracteres (65535
+              caracteres)</p>
+          </li>
+          <li>
+            <span class="code-bold">BOOL</span>
+            <p class="obs">Campo booleano, aceitando 0 para <b>falso</b> e
+              qualquer outro valor numerico para <b>verdadeiro</b></p>
+          </li>
+          <li>
+            <span class="code-bold">INT</span>
+            <p class="obs">Campo numérico contendo números de -2147483648 até
+              2147483648</p>
+          </li>
+          <li>
+            <span class="code-bold">FLOAT</span>
+            <p class="obs">Campo numérico contendo números com vírgula</p>
+          </li>
+          <li>
+            <span class="code-bold">DATE</span>
+            <p class="obs">Campo de data, sempre no formato 'YYYY-MM-DD'</p>
+          </li>
+          <li>
+            <span class="code-bold">DATETIME</span>
+            <p class="obs">Campo de data e horario, sempre no formato
+              'YYYY-MM-DD
+              hh:mm:ss'</p>
+          </li>
+          <li>
+            <span class="code-bold">TIMESTAMP</span>
+            <p class="obs">Campo de data, sempre no formato de DATETIME, porém
+              este tipo aceita apenas dados entre 1970 e 2038</p>
+          </li>
+        </ul>
+      </div>
+      <div class="card-col">
+        <h2>Avançando em SELECT</h2>
+        <h3>Cláusulas</h3>
+        <ul>
+          <li>
+            <span class="code-bold">WHERE</span>
+            <p class="obs">É o melhor e mais importante filtro para trazer dados
+              mais específicos dentro de uma query</p>
+          </li>
+          <li>
+            <span class="code-bold">HAVING</span>
+            <p class="obs">É semelhante à clausula WHERE, porém se refere a <a
+                href="#agregate">agregate functions</a></p>
+          </li>
+          <li>
+            <span class="code-bold">DISTINCT</span>
+            <p class="obs">Esta cláusula seleciona apenas os valores distintos
+              entre si (alternativa para GROUP BY)</p>
+          </li>
+          <li>
+            <span class="code-bold">EXISTS/ANY</span>
+            <p class="obs"></p>
+          </li>
+          <li>
+            <span class="code-bold">AND/OR/NOT</span>
+            <p class="obs">Ajuda o WHERE a filtrar ainda mais especificamente a
+              consulta</p>
+          </li>
+          <li>
+            <span class="code-bold">ORDER BY column_name DESC/ASC</span>
+            <p class="obs">Coloca os dados trazidos em ordem de acordo com a
+              coluna selecionada</p>
+          </li>
+          <li>
+            <span class="code-bold">LIMIT amount</span>
+            <p class="obs">Limita o número de dados trazidos pela query</p>
+          </li>
+          <li>
+            <span class="code-bold">SQL_SAFE_UPDATES = 0</span>
+            <p class="obs">Remove controle de segurança para updates sem
+              cláusula
+              WHERE (evitar ativar)</p>
+          </li>
+          <li>
+            <span class="code-bold">ALIAS</span>
+            <p class="obs">SELECT COUNT(*) AS alias_name FROM table_name</p>
+          </li>
+        </ul>
+        <h3>Operadores</h3>
+        <ul>
+          <li><span class="code-bold">
+              <,>, <=,>=, =
+            </span>
+            <p class="obs">Operadores básicos da matematica</p>
+          </li>
+          <li>
+            <span class="code-bold">LIKE</span>
+            <p class="obs">SELECT * FROM table_name WHERE column_name LIKE
+              '%text_split%'</p>
+          </li>
+          <li>
+            <span class="code-bold">IN</span>
+            <p class="obs">SELECT * FROM table_name WHERE column_name IN
+              (column_item, column_item)</p>
+          </li>
+          <li>
+            <span class="code-bold">BETWEEN</span>
+            <p class="obs">SELECT * FROM table_name WHERE column_name BETWEEN
+              column_item_min AND column_item_max (aceita ORDER BY)</p>
+          </li>
+        </ul>
+        <h3>Agrgegate functions</h3>
+        <p>
+        <ul>
+          <li>
+            <span class="code-bold">MIN(column_name)</span>
+            <p class="obs">SELECT MIN(column_name) FROM table_name</p>
+          </li>
+          <li>
+            <span class="code-bold">MAX(column_name)</span>
+            <p class="obs">SELECT MAX(column_name) FROM table_name</p>
+          </li>
+          <li>
+            <span class="code-bold">COUNT(column_name)</span>
+            <p class="obs">SELECT COUNT(column_name) FROM table_name WHERE
+              data_comparison</p>
+          </li>
+          <li>
+            <span class="code-bold">AVG(column_name)</span>
+            <p class="obs">SELECT AVG(column_name) FROM table_name</p>
+          </li>
+          <li>
+            <span class="code-bold">SUM(column_name)</span>
+            <p class="obs">SELECT SUM(column_name) FROM table_name OBS: Não
+              funciona com ORDER BY column_name</p>
+          </li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-col">
+        <h2>Funções em SQL</h2>
+        <h3>Funcões de String</h3>
+        <ul>
+          <li>
+            <span class="code-bold">CHAR_LENGTH(string)</span>
+            <p class="obs">Retorna a quantidade de caracteres de uma determinada
+              string</p>
+          </li>
+          <li>
+            <span class="code-bold">CONCAT(string, " ", string)</span>
+            <p class="obs">A função CONCAT_WS("separador", string1, string2)
+              concatena dados com um separador comum</p>
+          </li>
+          <li>
+            <span class="code-bold">FORMAT(number, slots)</span>
+            <p class="obs">Formata um número com determinado número de casas
+              após
+              a vírgula e arredonda de acordo com a regra da matematica</p>
+          </li>
+          <li>
+            <span class="code-bold">INSTR(string, substring)</span>
+            <p class="obs">Retorna a posição da substring na string alvo</p>
+          </li>
+          <li>
+            <span class="code-bold">LCASE(string) / UCASE(string)</span>
+            <p class="obs">Transforma o conteúdo da string em caixa baixa ou
+              caixa
+              alta, respectivamente</p>
+          </li>
+          <li>
+            <span class="code-bold">LEFT(string, number) / RIGHT(string,
+              number)</span>
+            <p class="obs">Extrai determinado número de caracteres de uma
+              string,
+              a começar pela esquerda (LEFT) ou pela direita (RIGHT)</p>
+          </li>
+          <li>
+            <span class="code-bold">REPLACE(column_name, string_before,
+              string_after)</span>
+            <p class="obs">Substitui determinado texto de uma coluna</p>
+          </li>
+          <li>
+            <span class="code-bold">SUBSTR(column_name, index, amount)</span>
+            <p class="obs">Extrai determinada quantidade de caracteres (amount)
+              de
+              uma string, começando pelo index</p>
+          </li>
+        </ul>
+        <h3>Funcões de Number</h3>
+        <ul>
+          <li>
+            <span class="code-bold">COUNT(column_name)</span>
+            <p class="obs">Conta o número de ocorrências em uma determinada
+              coluna
+            </p>
+          </li>
+          <li>
+            <span class="code-bold">CEIL(column_name) /
+              FLOOR(column_name)</span>
+            <p class="obs">Arredonda para cima/baixo</p>
+          </li>
+          <li>
+            <span class="code-bold">MAX(column_name) / MIN(column_name)</span>
+            <p class="obs">Retorna o maior/menor valor de uma determinada coluna
+            </p>
+          </li>
+          <li>
+            <span class="code-bold">SUM(column_name)</span>
+            <p class="obs">Retorna a soma dos valores de uma determinada coluna
+            </p>
+          </li>
+        </ul>
+        <h3>Funcões de Date</h3>
+        <ul>
+          <li>
+            <span class="code-bold">ADDDATE(column_name, date_amount) /
+              ADDTIME(column_name, time_amount[yyyy-mm-dd hh:mm:ss])</span>
+            <p class="obs">Adiciona ou remove dias, meses, anos, horas, minutos
+              e
+              segundos em um campo do tipo DATE/TIMESTAMP</p>
+          </li>
+          <li>
+            <span class="code-bold">DATEDIFF(date1, date2)</span>
+            <p class="obs">Retorna a diferença entre duas datas, em dias</p>
+          </li>
+          <li>
+            <span class="code-bold">DATE_FORMAT(date, format[%d, %m, %Y])</span>
+            <p class="obs">Formata uma data para o modelo desejado</p>
+          </li>
+          <li>
+            <span class="code-bold">DAY(), MONTH(), YEAR()</span>
+            <p class="obs">Retorna um número equivalente ao dia, mês, ano em
+              determinada string no formato YYYY-mm-dd hh:mm:ss</p>
+          </li>
+          <li>
+            <span class="code-bold">DAYOFWEEK(), DAYOFYEAR(),
+              WEEKOFYEAR()</span>
+            <p class="obs">Retorna um número equivalente ao dia da semana, dia
+              do
+              ano e semana do ano em determinada string no formato YYYY-mm-dd
+              hh:mm:ss</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="footer-bg">
