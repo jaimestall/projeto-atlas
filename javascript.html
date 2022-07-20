@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/index.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Guide</title>
+
+</head>
+
+<body>
+  <div class="nav-bar-bg">
+    <div id="nav-bar">
+      <div class="logo"><a href="/">Der Atlas</a></div>
+      <div class="menu">
+        <a href="/">Home</a>
+        <a href="/Basico.html">Básico</a>
+        <a href="/Javascript.html">Javascript</a>
+        <a href="/SQL.html">SQL</a>
+        <a href="/Deutsch.html">Deutsch</a>
+      </div>
+      <div class="menu-mobile">
+        <a href="/">Home</a>
+        <a href="/Basico.html">Básico</a>
+        <a href="/Javascript.html">Javascript</a>
+        <a href="/SQL.html">SQL</a>
+        <a href="/Deutsch.html">Deutsch</a>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <h2 class="titulo-corpo">Features da linguagem</h2>
+    <div class="cards-box-col">
+      <div class="card-col">
+        <h2>Variáveis</h2>
+        <p>- São declaradas com as palavras reservadas "var" (hoje em dia é a
+          menos utilizada), "let" e "const".</p>
+        <p>- Tipos de variáveis: number, string, boolean, array, object, null,
+          undefined, Symbol</p>
+        <p>- Variáveis não podem iniciar com números, não podem ser palavras
+          reservadas (var, let, const, for, class, etc..), não podem conter
+          acentos</p>
+        <p>- O comando "typeof variavel" retorna o tipo da variavel em questao
+        </p>
+        <h3>O tipo boolean</h3>
+        <p>Este tipo retorna verdadeiro ou falso. É usado para definir rumos em
+          estruturas condicionais.</p>
+        <p>Os seguintes casos retornam falso: <b><i>false, 0, NaN, null,
+              undefined, '' ou "" ou ``</i></b></p>
+        <h3>Diferença entre var, let e const</h3>
+        <p><span class="code-bold">var</span> é o tipo de declaração usado no
+          começo do javascript. Ainda funcional, possui <b>escopo global</b>,
+          isto é, pode ser acessado de onde quer que esteja. Podem ter seus
+          valores reestabelecidos e podem ser redeclarados.</p>
+        <p><span class="code-bold">let</span> é usada para variáveis que têm
+          <b>escopo de bloco</b>, o que quer dizer que só tem seu valor dentro
+          de um bloco de código, limitado por {}, além disso; podem ter seus
+          valores reestabelecidos mas <b>não pode ser redeclarado</b>.
+        </p>
+        <p><span class="code-bold">const</span> é usado para variáveis que
+          deverão permanecer constante. <b>Possui escopo de bloco</b>, assim
+          como o tipo let mas <b>não podem ter seus valores reestabelecidos e
+            não podem ser redeclarados.</b></p>
+      </div>
+      <div class="card-col">
+        <h2>Estruturas condicionais</h2>
+        <p>- Sâo blocos de códigos para executar determinadas ações de acordo
+          com a veracidade de uma determinada condição</p>
+        <p>- Operadores de comparação: &&, ||, &lt;, &gt;, &lt;=, &gt;=, ==, ===
+          (usa-se o sinal de ! para negar uma condição)</p>
+        <p>- Podem ser do tipo <b>if-else</b> ou do tipo <b>switch-case</b></p>
+        <div class="cards-box">
+          <div class="card">
+            <h3>Estrutura if-else</h3>
+            <p>
+              <code>
+                if(condição) {<br>
+                  bloco de comando 1;<br>
+                } else if (condição 2) {<br>
+                  bloco de comando 2;<br>
+                } else {<br>
+                  bloco de comando 3;<br>
+                }
+              </code>
+            </p>
+          </div>
+          <div class="card">
+            <h3>Estrutura switch-case</h3>
+            <p>
+              <code>
+                switch (condição) {<br>
+                  case 1:<br>
+                    bloco de comando 1;
+                    break;<br>
+                  case 2:<br>
+                    bloco de comando 2;
+                    break;<br>
+                  default:<br>
+                    comando caso !1 e !2;
+              </code>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card-col">
+        <h2>Funções</h2>
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bg">
+    <div id="footer">
+      <a href="https://github.com/jaimestall/atlas" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/jaimestall"
+        target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</body>
+
+</html>

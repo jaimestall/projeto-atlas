@@ -1,0 +1,220 @@
+/* Estilização geral */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+::-webkit-scrollbar { 
+display: none; 
+}
+#content {
+  max-width: 1100px;
+  margin: auto;
+}
+.titulo-corpo {
+  border-bottom: 1px solid #777;
+  color: #777;
+  font-size: 2em;
+  line-height: 1;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto 10px auto;
+  padding: 20px 0;
+}
+.cards-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+}
+.card {
+  background-color: #eee;
+  flex: 1 1 360px;
+  margin: 15px;
+  padding: 10px 0;
+  border: 1px solid #777;
+  box-shadow: 1.5px 1.5px 0 #bbb;
+}
+.cards-box-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.card-col {
+  background-color: #eee;
+  flex: 1 1 360px;
+  margin: 15px;
+  padding: 10px 0;
+  border: 1px solid #777;
+  box-shadow: 1.5px 1.5px 0 #bbb;
+}
+.card h2,
+.card-col h2 {
+  font-size: 1.75em;
+  color: #666;
+  margin: 0 20px 5px 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid white;
+}
+.card h3,
+.card-col h3 {
+  font-size: 1.25em;
+  color: #666;
+  margin: 5px 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid white;
+}
+.card p,
+.card-col p {
+  font-size: 1em;
+  padding: 0 20px;
+  line-height: 1.8;
+  color: #222;
+}
+.card ul,
+.card-col ul {
+  list-style: none;
+  text-indent: 15px;
+  font-size: 1em;
+  padding: 0 20px;
+  line-height: 1.8;
+  color: #222;
+}
+.card-itens {
+  margin: 5px 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15%, auto));
+}
+.card-item {
+  border: 1px solid #222;
+  align-items: left;
+  text-align: center;
+  margin: 5px;
+  padding: 10px 0;
+}
+.code-bold {
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+  background-color: #222;
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+.nav-bar-bg {
+  background-color: #777;  
+}
+#nav-bar {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+.menu-mobile {
+  display: none;
+}
+.logo {
+  margin: 0 10px;
+}
+.logo a {
+  font-weight: bold;
+  font-size: 2.25em;
+  color: white;
+}
+.logo a:hover {
+  color: #666;
+  transition: 0.5s;
+}
+.menu a {
+  font-weight: bold;
+  font-size: 1.25em;
+  margin: 5px;
+  padding: 10px;
+  color: white;
+}
+.menu a:hover {
+  color: #666;
+  transition: 0.5s;
+}
+@media screen and (max-width: 1100px) {
+  .card-itens {
+    margin: 5px 15px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(15%, auto));
+  }
+}
+@media screen and (max-width: 770px) {
+  .card-itens {
+    margin: 5px 15px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(15%, auto));
+  }
+}
+@media screen and (max-width: 630px) {
+  .card-itens {
+    margin: 5px 15px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(15%, auto));
+  }
+}
+@media screen and (max-width: 500px) {
+  .menu {
+    display: none;
+  }
+  #nav-bar {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .menu-mobile {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-mobile a {
+    font-size: 1.25em;
+    margin: 1px;
+    padding: 1px;
+    color: white;
+  }
+  .card-itens {
+    margin: 5px 15px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(15%, auto));
+  }
+}
+/* Estilização do Footer */
+.footer-bg {
+  background-color: #777;
+}
+#footer {
+  max-width: 1080px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+#footer a {
+  font-weight: bold;
+  font-size: 1.25em;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+#footer a:hover {
+  color: #666;
+  transition: 0.25s;
+}
