@@ -167,14 +167,7 @@ code {
     grid-template-columns: repeat(3, minmax(15%, auto));
   }
 }
-@media screen and (max-width: 630px) {
-  .card-itens {
-    margin: 5px 15px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(15%, auto));
-  }
-}
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .nav-bar-bg {
     position: inherit;
     background-color: #777;  
@@ -207,7 +200,14 @@ code {
   .card-itens {
     margin: 5px 15px;
     display: grid;
-    grid-template-columns: repeat(1, minmax(15%, auto));
+    grid-template-columns: repeat(2, minmax(15%, auto));
+  }
+  @media screen and (max-width: 500px) {
+    .card-itens {
+      margin: 5px 15px;
+      display: grid;
+      grid-template-columns: repeat(1, minmax(15%, auto));
+    }
   }
 }
 /* Estilização do Footer */
