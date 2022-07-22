@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/index.js"></script>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/index.js" defer></script>
   <title>Guide</title>
 
 </head>
 
-<body>
+<body onload="init()">
   <div class="nav-bar-bg">
     <div id="nav-bar">
       <div class="logo"><a href="./index.html">Der Atlas</a></div>
@@ -165,13 +165,19 @@
       <div class="card-flex-col">
         <h2>DOM (document object model)</h2>
         <h3>Principais métodos</h3>
-        <p>- <b>.createElement</b>
+        <p>- <b>.querySelector('seletor')</b>: Retorna um NodeList contendo os
+          elementos enviados como parâmetro. (class, id, tag-name)
         </p>
-        <p>- <b>.querySelector()</b>
+        <p>- NodeList é uma coleção de elementos que, ao ser atualizado, se
+          mantém como na origem.</p>
+        <p>- <b>.getElementById('id')</b>: Retorna um HTMLCollection contendo os
+          elementos que tenham o Id enviado como parâmetro.
         </p>
-        <p>- <b>.getElementById()</b>
-        </p>
-        <p>- <b>.addEventListener</b>
+        <p>- HTMLCollection é uma coleção de elementos que, ao ser atualizado,
+          tem os seus elementos também atualizados.</p>
+        <p>- <b>elemento.addEventListener('evento', função)</b>: Adiciona, a um
+          determinado elemento, um evento e uma função para quando este evento
+          for ativado.
         </p>
       </div>
     </div>
