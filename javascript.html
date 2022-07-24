@@ -119,6 +119,8 @@
             ser acessadas de fora dela</b></p>
         <p>- Callback são funções executadas por consequência de uma outra
           função, estas funções podem ser síncronas ou assíncronas</p>
+        <p>- <b>Arrow Functions</b>: () => { função }</p>
+        </div>
       </div>
       <div class="card-flex-col">
         <h2>Objetos</h2>
@@ -165,20 +167,41 @@
       <div class="card-flex-col">
         <h2>DOM (document object model)</h2>
         <h3>Principais métodos</h3>
-        <p>- <b>.querySelector('seletor')</b>: Retorna um NodeList contendo os
-          elementos enviados como parâmetro. (class, id, tag-name)
-        </p>
-        <p>- NodeList é uma coleção de elementos que, ao ser atualizado, se
-          mantém como na origem.</p>
-        <p>- <b>.getElementById('id')</b>: Retorna um HTMLCollection contendo os
-          elementos que tenham o Id enviado como parâmetro.
-        </p>
-        <p>- HTMLCollection é uma coleção de elementos que, ao ser atualizado,
-          tem os seus elementos também atualizados.</p>
-        <p>- <b>elemento.addEventListener('evento', função)</b>: Adiciona, a um
-          determinado elemento, um evento e uma função para quando este evento
-          for ativado.
-        </p>
+        <div class="card-flex-row">
+          <p><b>.getElementById('id')</b>: Retorna um <b>HTMLCollection</b>
+            contendo os
+            elementos que tenham o Id enviado como parâmetro.
+          </p>
+          <p><b>HTMLCollection</b> é uma coleção de elementos que, ao ser
+            atualizado,
+            tem os seus elementos também atualizados.</p>
+          <p>Variações: getElementsByTagName(), getElementsByClassName(),
+            getElementsByName()</p>
+        </div>
+        <div class="card-flex-row">
+          <p><b>.querySelector('seletor')</b>: Retorna um <b>NodeList</b>
+            contendo os
+            elementos enviados como parâmetro (class, id, tag-name).
+          </p>
+          <p><b>NodeList</b> é uma coleção de elementos que, ao ser atualizado,
+            se
+            mantém como na origem. Tem muito mais métodos com os quais pode-se
+            trabalhar em relação ao HTMLCollection</p>
+          <p>Variações: querySelectorAll()</p>
+        </div>
+        <div class="card-flex-row">
+          <p><b>elemento.addEventListener('evento', função)</b>: Adiciona, a um
+            determinado elemento, um evento e uma função para quando este evento
+            for ativado.
+          </p>
+          <p>Eventos mais comuns: </p>
+          <ul>
+            <li><b>click</b> - executa a função quando elemento for clicado</li>
+            <li><b>mouseenter</b> - executa a função quando o mouse passa pelo elemento</li>
+            <li><b>submit</b> - usada para formulários, executa a função quando submetido</li>
+            <li><b>load</b> - executa a função ao carregar um elemento</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
